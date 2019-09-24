@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="f()">
+</body>
+<script>
+    function f() {
+        let num = parseInt(prompt("Nhap so N: "));
+        let count = 0;
+        let text = "Cac so nguyen to cho den so " + num + " la: ";
+        while (count < num) {
+            if (f1(count) == 1) {
+                text += count + ",";
+            }
+            count++;
+        }
+        document.write(text);
+    }
+
+    function f1(x) {
+        if (x < 2) {
+            return 0;
+        } else {
+            for (i = 2; i <= Math.sqrt(x); i++) {
+                if (x % i == 0) {
+                    return 0;
+                }
+            }
+            return 1;
+        }
+    }
+
+
+</script>
+</html>
