@@ -10,13 +10,16 @@
     function f() {
         let num = parseInt(prompt("Nhap so N: "));
         let count = 0;
-        let text = "Cac so nguyen to cho den so " + num + " la: ";
+        let start =1;
+        let text = num+" So nguyen to cho den so: ";
         while (count < num) {
-            if (f1(count) == 1) {
-                text += count + ",";
+            if (f1(start) == 1) {
+                text += start + ",";
+                count++;
             }
-            count++;
+            start++;
         }
+        text =text.substring(0,text.length-1);
         document.write(text);
     }
 
